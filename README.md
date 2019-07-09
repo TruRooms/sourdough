@@ -40,8 +40,17 @@ Where possible, an endpoint will return an instance of the object as a convenien
 
 ##### .find(cart_id)
 ```ruby
-cart = Sourdough.cart.find('1')
-pp cart.body
+Sourdough.cart.find('1')
+##<Sourdough::Cart:0x00007feb8c995f78
+ #@body=
+  #{"id"=>"1",
+   #"cartName"=>"Untitled",
+   #"createdBy"=>"ben",
+   #"expiration"=>"2100-01-01",
+   #"url"=>"https://checkout.getbread.com/dfdsa",
+   #"isCustomTotal"=>true,
+   #"options"=>{},
+ #@id="1">
 ```
 
 ## Development

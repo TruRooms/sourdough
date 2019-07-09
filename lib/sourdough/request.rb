@@ -16,14 +16,20 @@ module Sourdough
 
     	conn.basic_auth api_key, secret_key
 
-    	resp = conn.run_request(@method.to_sym, @path, @headers, @params)
+    	@headers.merge!({'Content-Type': 'application/json'})
+
+    	resp = conn.run_request(@method.to_sym, @path, @params.to_json, @headers)
 
     	if [400,404,401,403,429,500].include?(resp.status)
     		raise specific_api_error(resp)
     	end
 
     	begin
-    		resp_body = JSON.parse(resp.body)
+    		if resp.status == 204
+    			resp_body = true
+    		else
+    			resp_body = JSON.parse(resp.body)
+    		end
     	rescue JSON::ParserError
     		raise general_api_error(resp.status, resp.body)
     	end
@@ -59,7 +65,7 @@ module Sourdough
         json_body: resp.body,
       }
 
-      message = "#{resp.reason_phrase} (#{resp.status})"
+      message = "#{resp.body} (#{resp.status})"
 
       case resp.status
       when 400, 404

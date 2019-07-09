@@ -12,7 +12,24 @@ class FakeBread < Sinatra::Base
   end
 
   get '/carts/:cart_id' do
-    json_response 200, 'cart.json'
+    if params[:cart_id] == 'TEST_CART_ID'
+      json_response 200, 'cart.json'
+    else
+      content_type :json
+      status 404
+    end
+  end
+
+  post '/carts/:cart_id/email' do
+    content_type :json
+    status 200
+    {"message"=>"Email Sent."}.to_json
+  end
+
+  post '/carts/:cart_id/text' do
+    content_type :json
+    status 200
+    {"message"=>"SMS Sent."}.to_json
   end
 
 
