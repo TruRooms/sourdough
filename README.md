@@ -1,5 +1,5 @@
 # Sourdough
-[![Build Status](https://travis-ci.com/TruRooms/sourdough.svg?branch=master)](https://travis-ci.com/TruRooms/sourdough)
+[![Build Status](https://travis-ci.com/TruRooms/sourdough.svg?branch=master)](https://travis-ci.com/TruRooms/sourdough)[![Maintainability](https://api.codeclimate.com/v1/badges/34681a541f847ea541af/maintainability)](https://codeclimate.com/github/TruRooms/sourdough/maintainability)[![Test Coverage](https://api.codeclimate.com/v1/badges/34681a541f847ea541af/test_coverage)](https://codeclimate.com/github/TruRooms/sourdough/test_coverage)
 
 An api wrapper for the Bread Financing Backend API.
 
