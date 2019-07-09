@@ -1,0 +1,34 @@
+{
+  "billingContact": {
+    "fullName": "Donald Duck",
+    "address": "201 Quack Lane",
+    "address2": "3",
+    "city": "Brooklyn",
+    "state": "NY",
+    "zip": "11238",
+    "phone": "5559073301",
+    "email": "donald.duck@example.com"
+  },
+  "breadTransactionId": "fe6499b7-9b6b-4c3d-9cdf-5afc1d840d12",
+  "merchantOrderId": "my-order-id",
+  "createdAt": "2016-08-08T18:50:14.853224Z",
+  "lineItems": [],
+  "shippingContact": {
+    "fullName": "Donald Duck",
+    "address": "137 Duffy Place",
+    "address2": "3",
+    "city": "Brooklyn",
+    "state": "NY",
+    "zip": "11238",
+    "phone": "5559073301"
+  },
+  "shippingCost": 6500,
+  "shippingMethodCode": "fedex-2day",
+  "trackingNumber": "ABCDEF1234",
+  "carrierName": "USPS",
+  "discounts": [],
+  "status": "CANCELED",
+  "total": 25000,
+  "adjustedTotal": 0,
+  "totalTax": 4380
+}
